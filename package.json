@@ -2,9 +2,10 @@
   "name": "graphql-course",
   "version": "1.0.0",
   "description": "Curso de GraphQL - udemy \n GraphQL e Apollo Server + Client - Crie aplicações e junte tudo em um grafo com end-point usando dados de APIs e BDs",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r sucrase/register src/index.js"
   },
   "keywords": [],
   "author": "Thais Kotovicz <thais_kotovicz@hotmail.com>",
@@ -17,6 +18,8 @@
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8"
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "sucrase": "^3.32.0"
   }
 }
