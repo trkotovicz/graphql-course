@@ -9,6 +9,14 @@ const server = new ApolloServer({
       average: Float
       married: Boolean!
       arrayString: [String!]!
+
+      user: User!
+      users: [User!]!
+    }
+
+    type User {
+      id: ID!
+      userName: String!
     }
   `,
   resolvers: {
@@ -19,6 +27,18 @@ const server = new ApolloServer({
       average: () => 55.43,
       married: () => true,
       arrayString: () => ['a', 'b', 'c'],
+
+      user: () => {
+        return { id: 'kduj12-jdh375', userName: 'thaiskotovicz' };
+      },
+
+      users: () => {
+        return [
+          { id: '1', userName: 'thaiskotovicz_01' },
+          { id: '2', userName: 'thaiskotovicz_02' },
+          { id: '3', userName: 'thaiskotovicz_03' },
+        ];
+      },
     },
   },
 });
