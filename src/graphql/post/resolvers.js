@@ -10,14 +10,5 @@ const post = async (_obj, { id }, { getPosts }) => {
 };
 
 export const postResolvers = {
-  Query: {
-    post,
-    posts,
-  },
-  Post: {
-    unixTimestamp: ({ createdAt }) => {
-      const timestamp = new Date(createdAt).getTime() / 1000;
-      return Math.floor(timestamp);
-    },
-  },
+  Query: { post, posts },
 };
