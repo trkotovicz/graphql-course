@@ -10,6 +10,12 @@ const post = async (_obj, { id }, { getPosts }) => {
   return post;
 };
 
+const user = async (parent, _, { getUsers }) => {
+  const response = await getUsers('/' + parent.userId);
+  return response.json();
+};
+
 export const postResolvers = {
   Query: { post, posts },
+  Post: { user },
 };

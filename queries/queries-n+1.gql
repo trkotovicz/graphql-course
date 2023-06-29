@@ -1,0 +1,22 @@
+query GET_POST($id: ID!) {
+  post(id: $id) {
+    id
+    title
+    body
+    indexRef
+    createdAt
+    user {
+      id
+      firstName
+      lastName
+      userName
+      indexRef
+      createdAt
+    }
+  }
+}
+
+# QUERY VARIABLES
+# {
+#   "id": "940"
+# }
